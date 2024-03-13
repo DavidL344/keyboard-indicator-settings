@@ -16,18 +16,21 @@ sudo apt install gnome-shell-extensions -y
 
 # Clone the repository
 git clone https://github.com/DavidL344/keyboard-indicator-settings.git ~/.local/share/gnome-shell/extensions/keyboard-indicator-settings@david.langr.tech
-
-# Enable the extension
-gnome-extensions enable keyboard-indicator-settings@david.langr.tech
 ```
 
 After the installation, restart the GNOME Shell by pressing `Alt` + `F2`, typing `r` and pressing `Enter`.
+Then, enable the extension by running the following command:
+
+```bash
+# Enable the extension
+gnome-extensions enable keyboard-indicator-settings@david.langr.tech
+```
 
 ## Removal
 
 ```bash
 # Disable the extension
-gnome-extensions disable
+gnome-extensions disable keyboard-indicator-settings@david.langr.tech
 
 # Remove the extension
 rm -rf ~/.local/share/gnome-shell/extensions/keyboard-indicator-settings@david.langr.tech
