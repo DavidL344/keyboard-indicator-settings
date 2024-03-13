@@ -1,8 +1,9 @@
 {
   "name": "Keyboard Indicator Settings",
-  "description": "Add a keyboard settings option into the keyboard picker",
+  "description": "Add a keyboard settings menu item into the keyboard indicator",
   "uuid": "keyboard-indicator-settings@david.langr.tech",
   "shell-version": [
     "42"
-  ]
+  ],
+  "url": "https://github.com/DavidL344/keyboard-indicator-settings"
 }
