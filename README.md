@@ -26,6 +26,14 @@ Then, enable the extension by running the following command:
 gnome-extensions enable keyboard-indicator-settings@david.langr.tech
 ```
 
+## Updating
+
+```bash
+# Pull the latest changes
+cd ~/.local/share/gnome-shell/extensions/keyboard-indicator-settings@david.langr.tech
+git pull
+```
+
 ## Removal
 
 ```bash
