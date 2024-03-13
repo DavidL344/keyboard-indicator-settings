@@ -1,6 +1,6 @@
 const GETTEXT_DOMAIN = 'keyboard-indicator-settings';
 
-const { St, Clutter } = imports.gi;
+const { St, Clutter, Gio } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -21,7 +21,14 @@ class Extension {
         this._popupMenuItem = new PopupMenu.PopupMenuItem(_('Open Keyboard Settings'));
 
         this._popupMenuItem.connect('activate', () => {
-            Main.Util.spawn(['gnome-control-center', 'keyboard']);
+            let command = "gnome-control-center keyboard";
+            let appInfo = Gio.AppInfo.create_from_commandline(command, null, Gio.AppInfoCreateFlags.NONE);
+
+            if (appInfo) {
+                appInfo.launch_uris([''], null, null);
+            } else {
+                log(`Failed to create AppInfo for ${command}`);
+            }
         });
 
         this._keyboardIndicator.menu.addMenuItem(this._popupMenuItem);
