@@ -1,0 +1,8 @@
+{
+  "name": "Keyboard Indicator Settings",
+  "description": "Add a keyboard settings option into the keyboard picker",
+  "uuid": "keyboard-indicator-settings@david.langr.tech",
+  "shell-version": [
+    "42"
+  ]
+}
