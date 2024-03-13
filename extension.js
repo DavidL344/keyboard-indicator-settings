@@ -28,7 +28,10 @@ class Extension {
     }
 
     disable() {
-        this._keyboardIndicator.menu.removeMenuItem(this._popupMenuItem);
+        if (this._popupMenuItem) {
+            this._popupMenuItem.destroy();
+            this._popupMenuItem = null;
+        }
     }
 }
 
